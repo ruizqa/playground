@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Playground</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0%;
+                padding: 1%;
+            }
+
+            h1{
+                text-align:center;
+
+            }
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                margin: 2% 0%;
+                
+            }
+
+            .box{
+                padding: 8%;
+                background-color: {{color}};
+                border: 3px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1>Welcome!</h1>
+        {% for i in range(x) %}
+            {% if i==0 %}
+            <div class=row>
+                <div class="box"></div>
+            {% elif i%4 ==0  %}
+            </div>
+            <div class=row>    
+                <div class="box"></div>
+            {% else  %}
+                <div class="box"></div>
+            {% endif %}
+
+            {% if i== x-1 %}
+            </div>    
+            {% endif %}
+        {% endfor %}
+        
+        
+    </body>
+</html>
